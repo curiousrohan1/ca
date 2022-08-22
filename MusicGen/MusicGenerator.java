@@ -1,8 +1,7 @@
 package MusicGen;
 
-import java.util.ArrayList;
 
-import Util;
+import java.util.ArrayList;
 
 public class MusicGenerator {
     static ArrayList<Integer> nums = new ArrayList<>();
@@ -15,15 +14,15 @@ public class MusicGenerator {
         }
         for (int i = input.length; i < numNotes; i++) {
             int num = GenNotesMama();
-            num %= 22;
+            num %= 37;
             while (num < 0) {
-                num += 22;
+                num += 37;
             }
             nums.add(num);
         }
         for (int i1 = 0; i1 < nums.size(); i1++) {
             Note note = new Note(nums.get(i1));
-            System.out.println(note.toString());
+            System.out.println(note);
             if (i1 % 4 == 3) {
                 System.out.println();
             }

@@ -19,4 +19,12 @@ public class Util {
         }
         return responses;
     }
+
+
+    public static String ask(String question) {
+        System.out.println(question);
+        return input.nextLine();
+    }
+
+
 }
